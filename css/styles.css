@@ -1,0 +1,264 @@
+
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 8%;
+    background-color: #1e3a5f;
+    color: white;
+}
+
+.logo {
+    font-size: 22px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #64b5f6;
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    color: #1e3a5f;
+    cursor: pointer;
+}
+
+/* General Sections */
+.section {
+    padding: 80px 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+h3 {
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+/* About Section */
+#about {
+    text-align: center;
+    background-color: #e8f0fe;
+}
+
+.tagline {
+    font-size: 20px;
+    color: #2563eb;
+    font-weight: bold;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #2563eb;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #1d4ed8;
+}
+
+/* Projects Section */
+#projects {
+    text-align: center;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.project-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-image {
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #dbeafe;
+    color: #1e3a5f;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Contact Section */
+#contact {
+    background-color: #e8f0fe;
+    text-align: center;
+}
+
+form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: left;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+form button {
+    align-self: flex-start;
+}
+
+#form-message {
+    color: green;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1e3a5f;
+    color: white;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #f5f5f5;
+}
+
+.dark-mode #about,
+.dark-mode #contact {
+    background-color: #1e293b;
+}
+
+.dark-mode .project-card {
+    background-color: #334155;
+}
+
+.dark-mode .project-image {
+    background-color: #475569;
+    color: white;
+}
+
+.dark-mode .tagline {
+    color: #93c5fd;
+}
+
+.dark-mode #form-message {
+    color: #86efac;
+}
+
+/* Tablet and Mobile Responsive Design */
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .section {
+        padding: 50px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .project-card {
+        padding: 15px;
+    }
+}
